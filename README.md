@@ -80,7 +80,7 @@ App
 └── Themes
 ```
 
-**Components** This is where your React components will live. Each component will have a directory containing the `.js` file, along with a style file inside `Styles` folder. The app will come with some commonly used components like Button.
+**Components** This is where your React components will live. Each component will have a directory containing the `.js` file, along with a style file inside `Styles` folder. The app will come with some commonly used components like Base.
 
 **Config** This is where all of your app configuration located like Reactotron config, persist, etc.
 

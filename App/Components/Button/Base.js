@@ -8,10 +8,10 @@ import {
 } from 'react-native'
 
 // Styles
-import styles from './Styles/ButtonStyle'
-import { apply } from '../Themes/OsmiProvider'
+import styles from '../Styles/Button/BaseStyle'
+import { apply } from '../../Themes/OsmiProvider'
 
-const Button = props => {
+const Base = props => {
   const { ...restProps } = props
   const { style } = restProps
 
@@ -21,7 +21,7 @@ const Button = props => {
     </TouchableOpacity>
   ) : (
     <TouchableNativeFeedback
-    background={TouchableNativeFeedback.Ripple(apply('white-soft'))}
+    background={TouchableNativeFeedback.Ripple(apply('white'))}
     {...props}>
       <View style={style}>
         {props.children}
@@ -30,13 +30,13 @@ const Button = props => {
   )
 }
 
-Button.propTypes = {
+Base.propTypes = {
   children: PropTypes.any,
-  style: PropTypes.object
+  style: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 }
 
-Button.defaultProps = {
+Base.defaultProps = {
   children: null
 }
 
-export default memo(Button)
+export default memo(Base)

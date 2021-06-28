@@ -1,7 +1,7 @@
 import 'react-native'
 import React from 'react'
 import { Text } from 'react-native'
-import Button from '../../App/Components/Button'
+import Button from '../../App/Components/Button/Base'
 import renderer from 'react-test-renderer'
 
 test(`Button component renders correctly if doesn't have children.`, () => {
