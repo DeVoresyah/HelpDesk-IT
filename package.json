@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.13.2",
+    "@react-native-clipboard/clipboard": "^1.8.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/bottom-tabs": "^5.11.2",
     "@react-navigation/drawer": "^5.11.4",
@@ -31,6 +32,7 @@
     "react-native-config": "^1.4.1",
     "react-native-device-info": "^8.0.0",
     "react-native-gesture-handler": "^1.9.0",
+    "react-native-otp-inputs": "^7.0.3",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.16.1",
