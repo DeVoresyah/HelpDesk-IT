@@ -31,12 +31,14 @@ const Schema = Yup.object().shape({
 })
 
 const LoginScreen = props => {
+  const { navigation } = props
+
   /**
    * Render form function
    * @param formProps
    * @private
    */
-  const _renderForm = ({ values, setFieldValue, errors }) => {
+  const _renderForm = ({ values, setFieldValue, errors, handleSubmit }) => {
     const setValue = useCallback(setFieldValue, [])
 
     return (
@@ -60,6 +62,7 @@ const LoginScreen = props => {
           <Button
             type={ButtonType.PRIMARY}
             title='Masuk'
+            onPress={(e) => {handleSubmit(e)}}
           />
 
           <Text style={[styles.desc, apply('my-8')]}>Belum punya akun?</Text>
@@ -88,6 +91,8 @@ const LoginScreen = props => {
         phone: values.phone
       }
     }
+
+    navigation.navigate("VerifOTP", { phone: values.phone })
 
     return false
   }
